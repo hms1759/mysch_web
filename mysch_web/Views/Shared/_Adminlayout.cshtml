@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Homemade College</title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/Content/asset/images/fav.ico" type="image/x-icon">
+    @Styles.Render("~/template/css")
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <!-- Head  -->
+    <!-- MOBILE MENU -->
+    <section>
+        <div class="ed-mob-menu">
+            <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+            <div class="ed-mm-menu">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index-2.html">
+                            <img src="images/logo.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-inn">
+                        <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+
+                        <h4>User Account</h4>
+                        <ul>
+                            <li><a href="#form">Sign In</a></li>
+                            <li><a href="#form">Register</a></li>
+                        </ul>
+                        <h4>All Pages</h4>
+                        <ul>
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="admin.html">Admin</a></li>
+                            <li><a href="contact-us.html">Student</a></li>
+                            <li><a href="admission.html">Admission</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--HEADER SECTION-->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!-- TOP BAR -->
+        <div class="ed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ed-com-t1-left">
+                            <ul>
+                                <li>
+                                    <a>12AG Federal Low Cost Housing Estate Ikorodu. Lagos Stage.</a>
+                                </li>
+                                <li>
+                                    <a>Phone: +234 806 699 5995</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ed-com-t1-right">
+                            <ul>
+                                <li>
+
+                                    @Html.ActionLink("Sign In", "Index", "Home")
+                                </li>
+                                <li>
+
+                                    @Html.ActionLink("Sign Up", "Studentcreate", "Students")
+
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div class="ed-com-t1-social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo" data-spy="affix" data-offset-top="250">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="wed-logo">
+                            <a href="index.html">
+                                <img src="~/Content/asset/images/logo.png" />
+                            </a>
+                        </div>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="active">
+
+                                    @Html.ActionLink("Home", "Index", "Home")
+                                </li>
+
+                                <li>
+
+                                    @Html.ActionLink("Admin", "Admin", "Home")
+                                </li>
+
+                                <li>
+
+                                    @Html.ActionLink("Student", "Student", "Home")
+
+                                </li>
+                                <li>
+
+                                    @Html.ActionLink("Contact", "Contact", "Home")
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Head  End -->
+
+
+    @RenderBody()
+    <!-- FOOTER COURSE BOOKING -->
+    <div class="das-dash">
+        <br>
+
+    </div>
+
+    <!-- FOOTER -->
+    <section class="wed-hom-footer">
+        <div class="container">
+
+            <div class="row wed-foot-link">
+
+                <div class="col-md-4 foot-tc-mar-t-o">
+                    <h4>Get In Touch</h4>
+                    <p>
+                        Address: 12AG Federal Low Cost Housing Estate Ikorodu.
+                        Lagos State.
+                    </p>
+
+                    <p>Phone: +234 806 699 5995</p>
+                    <p>Email: <a href="mailto:homemade@gmail.com">info@Homemade.com</a></p>
+                </div>
+                <div class="col-md-4 foot-tc-mar-t-o">
+                    <h4>HELP & SUPPORT</h4>
+                    <ul>
+                        <li>
+                            <a href="#">24x7 Live help</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#">Safety Tips</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row wed-foot-link-1">
+                    <div class="col-md-4">
+                        <h4>SOCIAL MEDIA</h4>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COPY RIGHTS -->
+    <section class="wed-rights">
+        <div class="container">
+            <div class="row">
+                <div class="copy-right">
+                    <a target="_blank" href="https://www.templateshub.net">Homemde</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Import jQuery before materialize.js-->
+
+    @Scripts.Render("~/template/js")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+﻿@model mysch_web.Models.login
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+    @Styles.Render("~/template/css")
+
+}
+
+<link href="~/Content/asset/css/style.css" rel="stylesheet" />
+
+<!-- SLIDER -->
+<section>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class=" container  " style="color:white;
+        justify-items:right; text-align:center; background-color:white;"
+        <table  >
+            <tr>
+
+               
+                <td class="col-lg-4 col-md-offset-3">
+                    <label class="field-validatio-error">
+                        @Html.DisplayFor(model => model.LoginErrorMessage)
+                    </label>
+                </td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="item slider1 active">
+                <img src="~/Content/asset/images/slider/1.jpg" alt="">
+                <div class="carousel-caption slider-con">
+                    <h2>Welcome to <span>Our College</span></h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available,
+                        but the majority have suffered alteration in some form
+                    </p>
+
+                    <a href="#" class="bann-btn-1">Admission</a><a href="#" class="bann-btn-2">Read More</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Content/asset/images/slider/2.jpg" alt="">
+                <div class="carousel-caption slider-con">
+                    <h2>Admission open <span>20/21</span></h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but
+                        the majority have suffered alteration in some form
+                    </p>
+                    <a href="#" class="bann-btn-1">Admission</a><a href="#" class="bann-btn-2">Read More</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Content/asset/images/slider/3.jpg" alt="">
+                <div class="carousel-caption slider-con">
+                    <h2>Homemade<span> College</span></h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available,
+                        but the majority have suffered alteration in some form
+                    </p>
+                    <a href="#" class="bann-btn-1">Admission</a><a href="#" class="bann-btn-2">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <i class="fa fa-chevron-left slider-arr"></i>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <i class="fa fa-chevron-right slider-arr"></i>
+        </a>
+    </div>
+    <br>
+</section>
+<div>
+    <div class="das-dash paddig">
+
+        <h4 class="text-center">Therefore Always Free From Repetition</h4><br>
+        <p>There are many variations of passages of Lorem Ipsum available,
+        but the majority have suffered alteration in some form, by injected humour</p>
+
+    </div>
+    <br>
+</div>
+<!--SECTION START ABOUT US-->
+<section>
+
+    <div class="container com-sp pad-bot-70" id="about">
+        <div class="row">
+
+            <div class="cor about-sp">
+                <div class="ed-about-tit">
+                    <div class="con-title">
+                        <h2>About <span>Us</span></h2>
+                        <p>Fusce id sem at ligula laoreet hendrerit venenatis sed purus.
+                        Ut pelslentesque maximus lacus, nec pharetra augue.</p>
+                    </div>
+                </div>
+                <div class="ed-about-sec1 ">
+                    <div class="ed-advan">
+                        <ul>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/1.png" alt="">
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Awards</h4>
+                                    <p>Class aptent taciti sociosqu ad litora torquent
+                                    per conubia nostra, per inceptos himenaeos. Morbi bibendum imperdiet bibendum.</p>
+                                    <a href="awards.html">Read more</a>
+                                </div>
+                            </li>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/2.png" alt="">
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Research</h4>
+                                    <p>tiam eget enim non magna vestibulum malesuada ut et lectus. 
+                                    Curabitur egestas risus massa, a malesuada erat ultrices non.</p>
+                                    <a href="research.html">Read more</a>
+                                </div>
+                            </li>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/3.png" alt="">
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Educations</h4>
+                                    <p>Maecenas venenatis, turpis ac tincidunt convallis, leo enim ultrices tortor,
+                                    at faucibus neque sapien ac elit. Curabitur ut ipsum odio.</p>
+                                    <a href="all-courses.html">Read more</a>
+                                </div>
+                            </li>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/4.png" alt="">
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Alumni</h4>
+                                    <p>Aliquam malesuada commodo lectus, at fermentum ligula finibus eu.
+                                    Morbi nisi neque, suscipit non pulvinar vitae.</p>
+                                    <a href="awards.html">Read more</a>
+                                </div>
+                            </li>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/5.png" alt="">
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Facilities</h4>
+                                    <p>Maecenas venenatis, turpis ac tincidunt convallis, leo enim ultrices tortor, 
+                                    at faucibus neque sapien ac elit. Curabitur ut ipsum odio.</p>
+                                    <a href="facilities.html">Read more</a>
+                                </div>
+                            </li>
+                            <li class="qw">
+                                <div class="ed-ad-img">
+                                    <img src="~/Content/asset/images/adv/6.png" />
+                                </div>
+                                <div class="ed-ad-dec">
+                                    <h4>Departments</h4>
+                                    <p>Maecenas venenatis, turpis ac tincidunt convallis, leo enim ultrices tortor,
+                                    at faucibus neque sapien ac elit. Curabitur ut ipsum odio.</p>
+                                    <a href="departments.html">Read more</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!--SECTION END-->
+<!--  sign -->
+<section id="form">
+    <div class="container   ">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="carousel-inner">
+                    <br>
+                    <div class="item slider1 active">
+                        <img src="~/Content/asset/images/slider/4.jpg" alt="">
+                        <div class="carousel-caption slider-con ">
+                            <h2 class="display-4">Welcome to <span>Our College</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!--<div class="ho-ex-title">
+                        <h4>Upcoming Event</h4>
+                    </div>-->
+                <br>
+                <div class="ho-ev-latest ho-ev-latest-bg-3  text-center">
+                    <div class="ho-lat-ev">
+                        <h4 class="text-center"> Login</h4>
+                        <p>Student area velit convallis venenatis lacus quis, efficitur lectus.</p>
+                    </div>
+                </div>
+
+                <div class="ho-st-login">
+                    <ul class="tabs  text-center">
+                        <li>    </li>
+                        <li class="tab col s12"><a href="#hom_log">Admin Login</a>
+                        <li>    </li>
+                    </ul>
+
+                    <div id="hom_log" class="col s12">
+
+                        @using (Html.BeginForm("Autorize", "Home", FormMethod.Post))
+                        {
+                        <table class="col s12">
+                            <tr class="row  col s12 validate">
+                               
+                                <td class="input-field col s12">
+                                    <label>Username</label>
+                                    @Html.EditorFor(model => Model.Username)
+                                    
+                                </td>
+
+                            </tr>
+                           
+                            <tr class="row  col s12 validate">
+                                <td class="input-field col s12">
+                                    <label>Password</label>
+                                    @Html.EditorFor(model => Model.Password)
+
+                                </td>
+
+                            </tr>
+                           
+
+
+                            <tr class="row">
+                                <td class="input-field col s12">
+                                    <input type="submit" value="Login" class="waves-effect waves-light light-btn">
+                                </td>
+                            </tr>
+                        </table>
+                        }
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+@Scripts.Render("~/template/js")

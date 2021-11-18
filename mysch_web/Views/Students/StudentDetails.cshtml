@@ -1,0 +1,113 @@
+﻿@model IEnumerable<mysch_web.Models.student_details>
+
+@{
+    ViewBag.Title = "StudentDetails";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+    else if (Convert.ToInt32(Session["userID"]) > 1)
+    {
+
+        Response.Redirect("~/Students/detail");
+    }
+
+}
+
+
+<div class="container">
+    <hr/>
+    <h5>STUDENT DETAILS</h5>
+
+   
+    <!--== USER INFO ==-->
+
+    <div class="sb2-12">
+        <ul>
+            <li>
+                <h5> Student Profile </h5>
+            </li>
+        </ul>
+        <div class="page-back">
+
+            @Html.ActionLink("Create New", "Studentcreate", "Students")
+
+            <a href=@Url.Action("Admin","Home")><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+        </div>
+    </div>
+
+     <table class="table table-striped table-bordered" style="border: 2px solid lightgray; ">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sponsor)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateofBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sponsor)
+                </td>
+                <td style="padding:-10px">
+                    <h class="btn btn-primary" style="background-color:grey;  width:30%; color: white;">
+
+                        <a> @Html.ActionLink("Edit", "Edit", new { id = item.Id })</a>
+                    </h>
+                    <h class="btn btn-primary" style="background-color:forestgreen; width:35%; color: white;">
+                        <a>@Html.ActionLink("Details", "Details", new { id = item.Id })</a>
+                    </h>
+                    <h class="btn btn-primary" style="color:white; width:30%; background-color:red;">
+                        <a>@Html.ActionLink("Del", "Delete", new { id = item.Id })</a>
+                    </h>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

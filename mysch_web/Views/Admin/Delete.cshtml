@@ -1,0 +1,73 @@
+﻿@model mysch_web.Models.Admin_staff
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+    int id = (int)Session["userID"];
+    if (id > 1)
+    {
+        Response.Redirect("~/Admin/All_staf");
+    }
+    else if (id <= 0)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+}
+
+<div class="container">
+    <!--== USER INFO ==-->
+    <div class="sb2-12">
+        <ul class=" text-center ">
+            <li>
+                <h5> Delete Profile </h5>
+            </li>
+        </ul>
+        <div class="page-back">
+
+
+            <a href=@Url.Action("All_staff","Admin")><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+        </div>
+    </div>
+
+    <h3></h3>
+    <div>
+      
+        <table class="col-sm-6">
+            <tr>
+                <td>
+                    <label> Surname :</label>
+                </td>
+
+                <td>
+
+                    @Html.DisplayFor(model => model.surname)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label> Name :</label>
+                </td>
+                <td>
+
+                    @Html.DisplayFor(model => model.Name)
+                </td>
+            </tr>
+
+
+
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <tr class="row">
+                    <td class="input-field col s12">
+                        <input type="submit" value="Delete" class="btn btn-primary" style="color:white; background-color:red;" />
+                    </td>
+                </tr>
+               
+            }
+        </table>
+    </div>
+</div>

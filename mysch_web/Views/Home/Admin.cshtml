@@ -1,0 +1,249 @@
+﻿@model mysch_web.Models.Admin_staff
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+
+
+   
+
+
+
+}
+
+
+<div class="" style="padding-left:10px">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />  <br />
+    <br />
+
+    <div class="row">
+        <div class="sb2-1">
+            <!--== USER INFO ==-->
+            <div class="sb2-12">
+                <ul>
+                    <li>
+                        <h5>  @Session["userName"].ToString().ToUpper() </h5>
+                    </li>
+                </ul>
+            </div>
+            <!--== LEFT MENU ==-->
+            <div class="sb2-13">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li class="menu-active">
+
+                        @Html.ActionLink("Dashboard", "Admin", "Home")
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Users</a>
+                        <div class="collapsible-body left-sub-menu">
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("All Staff", "All_staff", "Admin")
+                                </li>
+                                <li>
+
+                                    @Html.ActionLink("New Staff", "Create", "Admin")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Student", "StudentDetails", "Students")
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i> All Class</a>
+                        <div class="collapsible-body left-sub-menu">
+                            <ul class="collapsible" data-collapsible="accordion">
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>Jss1</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">Jss1 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                @* <a href="admin-add-courses.html">Scheme of Work</a>*@
+                                                @Html.ActionLink("SetExamination", "Admin", "Home")
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>Jss2</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">Js2 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-add-courses.html">Scheme of Work</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>Jss3</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">Jss3 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-add-courses.html">Scheme of Work</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>Ss1</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">SS1 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-add-courses.html">Scheme of Work</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>Ss2</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">SS2 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-add-courses.html">Scheme of Work</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-book" aria-hidden="true"></i>SS3</a>
+                                    <div class="collapsible-body left-sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="admin-all-courses.html">SS3 Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-all-courses.html">School time table</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-add-courses.html">Scheme of Work</a>
+                                            </li>
+                                            <li>
+                                                <a href="admin-trash-courses.html">E-book</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li>
+                        <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+                        <div class="collapsible-body left-sub-menu">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="index.html #about">About</a>
+                                </li>
+                                <li>
+                                    <a href="admission.html">Admission</a>
+                                </li>
+                                <li>
+                                    <a href="student.html">Student</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-pencil" aria-hidden="true"></i> Exam time table</a>
+                        <div class="collapsible-body left-sub-menu">
+                            <ul>
+                                <li><a href="admin-exam-all.html">All Exams</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <!--== BODY INNER CONTAINER ==-->
+        <div class="sb2-2">
+            <!--== breadcrumbs ==-->
+            <div class="sb2-2-2">
+                <ul>
+                    <li>
+                        <i class="fa fa-home" aria-hidden="true"><a href=@Url.Action("Logout", "Home")> Home</a></i>
+                    </li>
+                    <li class="active-bre">
+                        <a> Dashboard</a>
+                    </li>
+                    <li class="page-back">
+
+                        <a href=@Url.Action("Logout","Home")><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="jumbotron">
+
+                <br><br><br><br> <br><br><br><br>
+                <br><br><br><br> <br><br><br><br>
+            </div>
+        </div>
+
+        <br><br><br><br> <br><br><br><br>
+    </div>
+    <br><br><br><br> <br><br><br><br>
+</div>
+
+

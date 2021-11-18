@@ -1,0 +1,82 @@
+﻿@model mysch_web.Models.Admin_staff
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+    int id = (int)Session["userID"];
+    if (id > 1)
+    {
+        Response.Redirect("~/Admin/All_staf");
+    }
+    else if (id <= 0)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+}
+
+
+<div class=" container">
+
+
+    <!--== USER INFO ==-->
+    <div class="sb2-12">
+        <ul>
+            <li>
+                <h5>  Details</h5>
+            </li>
+        </ul>
+        <div class="page-back">
+
+
+            <a href=@Url.Action("All_staff","Admin")><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+        </div>
+    </div>
+   <br />
+
+    <form>
+        <div class="form-row ">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Surname :</label>
+
+                @Html.DisplayFor(model => model.surname)
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Name :</label>
+
+                @Html.DisplayFor(model => model.Name)
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Password :</label>
+
+                @Html.DisplayFor(model => model.passWord)
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Phone No :</label>
+
+                @Html.DisplayFor(model => model.Phone)
+
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Email :</label>
+
+                @Html.DisplayFor(model => model.Email)
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Address :</label>
+
+                @Html.DisplayFor(model => model.Address)
+
+            </div>
+
+        </div>
+             
+
+    </form>
+
+</div>

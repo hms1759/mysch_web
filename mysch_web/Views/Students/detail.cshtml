@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "detail";
+    Layout = "~/Views/Shared/_myschlayout.cshtml";
+}
+<link href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css " rel="stylesheet" />
+
+<h2>detail</h2>
+
+
+<div class="container">
+<table id="detail" class="display">
+    <thead>
+        <tr>
+            <th>
+                Surname
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Address
+            </th>
+
+            <th>
+                ClassS
+            </th>
+            <th>
+                Ponsor
+            </th>
+        </tr>
+    </thead>
+
+</table>
+
+<link href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css " rel="stylesheet" />
+@section scripts {
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" defer></script>
+    <script>
+        $(document).ready(function () {
+            $('#detail').DataTable(
+                {
+                    "ajax":
+                    {
+                        "url": "/Students/Getlist",
+                        "data": "GET",
+                        "datatypes": "json"
+                    },
+                    "columns":
+                        [{ "data": "Surname" },
+                            { "data": "Email" },
+                        { "data": "Name" },
+                        { "data": "Phone" },
+                        { "data": "DateofBirth" },
+                        { "data": "Address" },
+                        { "data": "Class" },
+                        { "data": "Sponsor" }
+
+                        ]
+                }
+            );
+        });
+    </script>
+}
